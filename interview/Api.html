@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemple Simple Google Maps</title>
+    <!-- cela ne fonctionne pas directement, manque clé api-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API"></script>
+    <script>
+        function initMap() {
+        var location = {lat: -34.397, lng: 150.644};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+    </script>
+</head>
+<body onload="initMap()">
+    <div id="map" style="height: 400px; width: 100%;"></div>
+</body>
+</html>
